@@ -1,0 +1,730 @@
+{
+	"info": {
+		"_postman_id": "d32ed669-95e1-47df-a853-a1cf44c569c7",
+		"name": "filer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get_all_folder",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Variable_link}}api/folder/",
+					"host": [
+						"{{Variable_link}}api"
+					],
+					"path": [
+						"folder",
+						""
+					]
+				},
+				"description": "List all available foler in database"
+			},
+			"response": [
+				{
+					"name": "get_all_folder",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Variable_link}}api/folder/",
+							"host": [
+								"{{Variable_link}}api"
+							],
+							"path": [
+								"folder",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 26 Mar 2020 05:13:41 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.7"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "168"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Folder1\",\n        \"created_at\": \"2020-03-25T05:48:59.629432Z\",\n        \"uploaded_at\": \"2020-03-25T05:48:59.629403Z\",\n        \"modified_at\": \"2020-03-25T05:48:59.629446Z\",\n        \"level\": 0\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "create_folder",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "folder2",
+							"type": "text"
+						},
+						{
+							"key": "parent",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{Variable_link}}api/folder/",
+					"host": [
+						"{{Variable_link}}api"
+					],
+					"path": [
+						"folder",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "create_folder",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "folder2",
+									"type": "text"
+								},
+								{
+									"key": "parent",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Variable_link}}api/folder/",
+							"host": [
+								"{{Variable_link}}api"
+							],
+							"path": [
+								"folder",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 26 Mar 2020 05:16:03 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.7"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "166"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 2,\n    \"name\": \"folder2\",\n    \"created_at\": \"2020-03-26T05:16:03.329005Z\",\n    \"uploaded_at\": \"2020-03-26T05:16:03.328979Z\",\n    \"modified_at\": \"2020-03-26T05:16:03.329017Z\",\n    \"level\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "delete_folder",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{Variable_link}}api/folder/2",
+					"host": [
+						"{{Variable_link}}api"
+					],
+					"path": [
+						"folder",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "delete_folder",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{Variable_link}}api/folder/2",
+							"host": [
+								"{{Variable_link}}api"
+							],
+							"path": [
+								"folder",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 26 Mar 2020 05:17:14 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.7"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "166"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 2,\n    \"name\": \"folder2\",\n    \"created_at\": \"2020-03-26T05:16:03.329005Z\",\n    \"uploaded_at\": \"2020-03-26T05:16:03.328979Z\",\n    \"modified_at\": \"2020-03-26T05:16:03.329017Z\",\n    \"level\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "get_all_pic",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Variable_link}}api/image/",
+					"host": [
+						"{{Variable_link}}api"
+					],
+					"path": [
+						"image",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get_all_pic",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Variable_link}}api/image/",
+							"host": [
+								"{{Variable_link}}api"
+							],
+							"path": [
+								"image",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 26 Mar 2020 05:32:37 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.7"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "223"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"\",\n        \"folder\": 1,\n        \"owner\": 1,\n        \"file\": \"filer_public/d4/01/d4015a5a-8e6c-4d85-9b5a-5858645a0614/macos-mojave-wallpaper-2.jpg\",\n        \"uploaded_at\": \"2020-03-25T05:49:07.684091Z\",\n        \"modified_at\": \"2020-03-25T05:51:57.938401Z\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "add_image",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "pic2",
+							"type": "text"
+						},
+						{
+							"key": "folder",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "owner",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/gbs/Downloads/macOS-Mojave-Wallpaper-2.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{Variable_link}}api/image/",
+					"host": [
+						"{{Variable_link}}api"
+					],
+					"path": [
+						"image",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "add_image",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "pic2",
+									"type": "text"
+								},
+								{
+									"key": "folder",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "owner",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/gbs/Downloads/macOS-Mojave-Wallpaper-2.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Variable_link}}api/image/",
+							"host": [
+								"{{Variable_link}}api"
+							],
+							"path": [
+								"image",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 26 Mar 2020 05:35:29 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.7"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "225"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 5,\n    \"name\": \"pic2\",\n    \"folder\": 2,\n    \"owner\": 1,\n    \"file\": \"filer_public/c3/37/c337b93d-c214-4e3e-a78a-05f0f8d7dd95/macos-mojave-wallpaper-2.jpg\",\n    \"uploaded_at\": \"2020-03-26T05:35:29.571556Z\",\n    \"modified_at\": \"2020-03-26T05:35:29.571588Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get_all_video",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Variable_link}}api/video",
+					"host": [
+						"{{Variable_link}}api"
+					],
+					"path": [
+						"video"
+					]
+				},
+				"description": "\t"
+			},
+			"response": [
+				{
+					"name": "get_all_video",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Variable_link}}api/video",
+							"host": [
+								"{{Variable_link}}api"
+							],
+							"path": [
+								"video"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 26 Mar 2020 05:36:46 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.7"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "147"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 3,\n        \"name\": \"\",\n        \"folder\": null,\n        \"owner\": null,\n        \"file\": null,\n        \"uploaded_at\": \"2020-03-25T09:55:52.498707Z\",\n        \"modified_at\": \"2020-03-25T09:55:52.498733Z\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "add_video",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "video4",
+							"type": "text"
+						},
+						{
+							"key": "folder",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "owner",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "video1.mp4"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{Variable_link}}api/video/",
+					"host": [
+						"{{Variable_link}}api"
+					],
+					"path": [
+						"video",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "add_video",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "video4",
+									"type": "text"
+								},
+								{
+									"key": "folder",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "owner",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "video1.mp4"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Variable_link}}api/video/",
+							"host": [
+								"{{Variable_link}}api"
+							],
+							"path": [
+								"video",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 26 Mar 2020 05:54:51 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.7"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "209"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 6,\n    \"name\": \"video4\",\n    \"folder\": 2,\n    \"owner\": 1,\n    \"file\": \"filer_public/92/2a/922a8c86-8d23-4960-9bcf-23e5e51438d3/video1.mp4\",\n    \"uploaded_at\": \"2020-03-26T05:54:51.542849Z\",\n    \"modified_at\": \"2020-03-26T05:54:51.542870Z\"\n}"
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "Token ddf4684302d7b1d2f1d0b5b3c83f523eeb5cab88",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "Authorization",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "99d463b3-4602-4ac8-b198-9b0e8e5b2fd4",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "f32bcd72-d9ca-4de1-88ef-41e92d05605d",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "3f8ad38e-206f-49da-aa91-6b5baa146431",
+			"key": "Variable_link",
+			"value": "127.0.0.1:8000/",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}

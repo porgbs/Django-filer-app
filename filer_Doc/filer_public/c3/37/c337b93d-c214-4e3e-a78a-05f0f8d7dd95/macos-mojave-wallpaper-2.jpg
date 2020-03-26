@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html lang="en-us" >
+<head>
+<title>Site administration | Django site admin</title>
+<link rel="stylesheet" type="text/css" href="/static/admin/css/base.css">
+<link rel="stylesheet" type="text/css" href="/static/admin/css/dashboard.css">
+
+
+
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/admin/css/responsive.css">
+    
+
+<meta name="robots" content="NONE,NOARCHIVE">
+</head>
+
+
+<body class=" dashboard"
+  data-admin-utc-offset="0">
+
+<!-- Container -->
+<div id="container">
+
+    
+    <!-- Header -->
+    <div id="header">
+        <div id="branding">
+        
+<h1 id="site-name"><a href="/admin/">Django administration</a></h1>
+
+        </div>
+        
+        
+        <div id="user-tools">
+            
+                Welcome,
+                <strong>gbs</strong>.
+            
+            
+                
+                    <a href="/">View site</a> /
+                
+                
+                    
+                    
+                
+                
+                <a href="/admin/password_change/">Change password</a> /
+                
+                <a href="/admin/logout/">Log out</a>
+            
+        </div>
+        
+        
+        
+    </div>
+    <!-- END Header -->
+    
+    
+
+    
+        
+        <ul class="messagelist">
+          <li class="warning">Image with ID “1/change/filer_public/d4/01/d4015a5a-8e6c-4d85-9b5a-5858645a0614/macos-mojave-wallpaper-2.jpg” doesn’t exist. Perhaps it was deleted?</li>
+        </ul>
+        
+    
+
+    <!-- Content -->
+    <div id="content" class="colMS">
+        
+        <h1>Site administration</h1>
+        
+<div id="content-main">
+
+
+    
+        <div class="app-auth module">
+        <table>
+        <caption>
+            <a href="/admin/auth/" class="section" title="Models in the Authentication and Authorization application">Authentication and Authorization</a>
+        </caption>
+        
+            <tr class="model-group">
+            
+                <th scope="row"><a href="/admin/auth/group/">Groups</a></th>
+            
+
+            
+                <td><a href="/admin/auth/group/add/" class="addlink">Add</a></td>
+            
+
+            
+                
+                <td><a href="/admin/auth/group/" class="changelink">Change</a></td>
+                
+            
+            </tr>
+        
+            <tr class="model-user">
+            
+                <th scope="row"><a href="/admin/auth/user/">Users</a></th>
+            
+
+            
+                <td><a href="/admin/auth/user/add/" class="addlink">Add</a></td>
+            
+
+            
+                
+                <td><a href="/admin/auth/user/" class="changelink">Change</a></td>
+                
+            
+            </tr>
+        
+        </table>
+        </div>
+    
+        <div class="app-filer module">
+        <table>
+        <caption>
+            <a href="/admin/filer/" class="section" title="Models in the Filer application">Filer</a>
+        </caption>
+        
+            <tr class="model-folder">
+            
+                <th scope="row"><a href="/admin/filer/folder/">Folders</a></th>
+            
+
+            
+                <td>&nbsp;</td>
+            
+
+            
+                
+                <td><a href="/admin/filer/folder/" class="changelink">Change</a></td>
+                
+            
+            </tr>
+        
+            <tr class="model-thumbnailoption">
+            
+                <th scope="row"><a href="/admin/filer/thumbnailoption/">Thumbnail options</a></th>
+            
+
+            
+                <td><a href="/admin/filer/thumbnailoption/add/" class="addlink">Add</a></td>
+            
+
+            
+                
+                <td><a href="/admin/filer/thumbnailoption/" class="changelink">Change</a></td>
+                
+            
+            </tr>
+        
+        </table>
+        </div>
+    
+
+</div>
+
+        
+<div id="content-related">
+    <div class="module" id="recent-actions-module">
+        <h2>Recent actions</h2>
+        <h3>My actions</h3>
+            
+            
+            
+            <p>None available</p>
+            
+    </div>
+</div>
+
+        <br class="clear">
+    </div>
+    <!-- END Content -->
+
+    <div id="footer"></div>
+</div>
+<!-- END Container -->
+
+</body>
+</html>
